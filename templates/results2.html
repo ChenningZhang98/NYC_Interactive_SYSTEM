@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inspection Results</title>
+</head>
+<body>
+<h1>Restaurant Inspection Query</h1>
+
+{% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+{% endfor %}
+
+<br/><br/><br/><br/>
+
+<form action="http://localhost:5004/comment" method="POST">
+<fieldset>
+    <legend>Comments for Inspection Results</legend>
+    <label>ID:
+        <input type="number" name="id"/>
+    </label><br/><br/>
+    <label>Comment:
+        <textarea name="comment"/>Insert comments regarding your inspection results here</textarea>
+    </label><br/>
+</fieldset>
+<fieldset>
+    <label><input type="reset" value="Clear"/></label>
+    <label><input type="submit" value="Send"/></label>
+    {{val}}
+</fieldset>
+</form>
+
+</body>
+</html>

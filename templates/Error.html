@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<body>
+<h1>Restaurant Inspection Query</h1>
+<form action="http://localhost:5004/inspection" method="POST">
+   <fieldset>
+    <legend>Restaurant Information</legend>
+    <label>Restaurant Name:
+    <input type="text" name="name" />
+    </label><br/>
+    <label>BORO (Neighborhood):
+    <input type="text" name="boro"/>
+	</label><br/>
+    <label>Zipcode:
+    <input type="text" name="zipcode"/>
+    </label><br/>
+   </fieldset>
+    <fieldset>
+    <label><input type="reset" value="Clear"/></label>
+    <label><input type="submit" value="Send"/></label>
+   </fieldset>
+{{val}}
+
+</form>
+</body>
+</html>
